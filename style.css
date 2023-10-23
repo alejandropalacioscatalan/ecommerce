@@ -1,0 +1,159 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial;
+}
+
+
+header {
+  grid-area: header;
+  background-color: rgb(2, 2, 100);
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+sidebar {
+  grid-area: sidebar;
+  background-color: rgb(230, 229, 229);
+  height: 85vh;
+  box-sizing: border-box;
+}
+main {
+  grid-area: main;
+  background-color: rgb(200, 200, 200);
+  height: 85vh;
+  overflow-y: scroll;
+
+}
+footer {
+  grid-area: footer;
+  background-color: rgb(89, 89, 138);
+  height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "sidebar main main main main main"
+    "footer footer footer footer footer footer";
+  gap: 0px;
+  
+}
+
+.cabecera {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.texto-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.texto-cabecera {
+  color: white;
+  font-size: 20px;
+}
+
+.texto-cabecera-menu {
+
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.item-menu {
+  gap: 10px;
+  padding: 20px 0px 20px 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+
+.lista-categorias {
+  padding-left: 20px;
+  list-style: none;
+
+}
+
+.articulos-grid-container {
+  
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(
+      250px,
+      1fr
+    ));
+    gap:10px;   
+}
+
+.tarjeta {
+  height: 340px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: 1px solid rgb(168, 168, 168);
+  cursor: pointer;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+  
+
+img:hover {
+    width: 220px;
+    height: 220px;
+}
+
+.text-nombre-articulo {
+  font-size: larger;
+  text-align: center;
+}
+
+.text-precio-articulo {
+  text-align: center;
+}
+
+.container-comprar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 250px;
+}
+
+.text-comprar-articulo {
+  background-color: rgb(22, 22, 85);
+  color: white;
+  text-align: center;
+  height: 35px;
+}
+
+ .lista-categorias .item-menu:hover{
+  background: rgb(89, 89, 138); 
+  color:white;
+  font-weight: 600;
+ 
+}
